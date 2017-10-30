@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Илья Катунцев](https://up.htmlacademy.ru/htmlcss/19/user/498269).
-* Наставник: `Неизвестно`.
+* Наставник: Лиза Позднякова (https://htmlacademy.ru/profile/lizzy).
 
 ---
 
