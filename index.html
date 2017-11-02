@@ -6,7 +6,150 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <header class="index-header">
+
+      <div class="index-logo"><img src="" alt="Gllacy Shop Logo"></div>
+
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#">Каталог</a>
+            <ul class="sub-menu">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="/gllacy-catalog.html">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
+        </ul>
+      </nav>
+
+      <div class="search">
+        <button type="button"><img src="" alt="Поиск"></button>
+      <!-- пока не знаю как сделать поиск, в тз написано, что это кнопка -->
+      </div>
+
+      <div class="user-block"><button type="button"><img src="" alt="Вход" width="" height="">Вход</button></div>
+      <!-- в тз написано, что это кнопка -->
+      <div class="basket"><img src="" alt="Корзина" width="21px" height="20px"></div>
+      <!-- не понял в каком формате все иконки в макете делать -->
+      <div class="header-contacts">
+        <p>С 10 до 20, ежедневно</p>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+      </div>
+
+    </header>
+
+    <div class="wrap">
+      <div class="slider"></div>
+    </div>
+
+    <div class="both-button">
+      <button>Давайте оба!</button>
+    </div>
+
+    <div class="half-width">
+      <section class="promo1-section">
+        <h3>Малинка даром!</h3>
+        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+        <button>Хочу варенье!</button>
+      </section>
+    </div>
+
+    <div class="half-width">
+      <section class="promo2-section">
+        <h3>Шоколадки даром!</h3>
+        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+        <button>Хочу шоколадки!</button>
+      </section>
+    </div>
+
+    <div class="quarter-width">
+      <div class="product">
+        <div class="bestseller"><img src="" alt=""></div>
+        <div class="product-image"><img src="" alt=""></div>
+        <div class="price">310₽/кг</div>
+        <div class="product-name">
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        </div>
+      </div>
+    </div>
+    <!-- пусть пока будет один товар-->
+
+    <section class="main-text">
+      <h4>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h4>
+
+      <div class="half-width">
+        <div class="text-block-wrapper">
+          <div class="text-icon"><img src="" alt="Мороженое"></div>
+          <div class="text-block">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
+        </div>
+      </div>
+      <!-- пусть пока будет один абзац -->
+    </section>
+
+    <div class="half-width">
+      <article class="blog-preview">
+        <p>Новое в нашем блоге</p>
+        <h4><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h4>
+      </article>
+    </div>
+
+    <div class="half-width">
+      <section class="subscription">
+        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form action="/echo">
+          <input type="email" placeholder="Электронная почта">
+          <input type="submit" value="Отправить">
+        </form>
+        <!-- дивы в форме -->
+      </section>
+    </div>
+
+    <div class="map-wrapper">
+      <div class="map"></div>
+
+      <div class="pin"></div>
+
+      <div class="map-contacts">
+        <p class="contacts-regular">Адрес главного офиса <br>и офлайн-магазина:</p>
+        <p class="contacts-strong">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p class="contacts-regular">Для заказов по телефону:</p>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+        <p class="contacts-regular">(с 10 до 20 ежедневно)</p>
+        <button type="button">Форма обратной связи</button>
+      </div>
+
+    </div>
+
+    <footer>
+
+      <div class="social-media">
+        <ul>
+          <li><a href="twitter.com"><img src="" alt="Twitter">Twitter</a></li>
+          <li><a href="Instagram"><img src="" alt="Instagram">Instagram</a></li>
+          <li><a href="Facebook"><img src="" alt="Facebook">Facebook</a></li>
+          <li><a href="vk.com"><img src="" alt="Вконтакте">Вконтакте</a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-menu">
+        <ul>
+          <li><a href="#"><img src="" alt="Любим своих поставщиков">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
+        </ul>
+      </nav>
+
+      <div class="developer">
+        <img src="" alt="HTML Academy">
+        <p>Сделано в HTML Academy © 2017</p>
+      </div>
+
+    </footer>
 
   </body>
 </html>
