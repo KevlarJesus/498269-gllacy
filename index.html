@@ -11,7 +11,7 @@
       <div class="index-logo"><img src="" alt="Gllacy Shop Logo"></div>
 
       <nav class="main-menu">
-        <ul>
+        <ul class=main-navigation>
           <li><a href="#">Каталог</a>
             <ul class="sub-menu">
               <li><a href="#">Новинки</a></li>
@@ -24,120 +24,156 @@
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О Компании</a></li>
         </ul>
+
+        <ul class="user-navigation">
+          <li class="search">
+              <form action=""><input type="search" placeholder="Что ищем?"></form>
+          </li>
+          <li class="user-login">
+            <p>Вход</p>
+            <div class="login-form">
+              <form action="/echo">
+                <input type="email" placeholder="Электронная почта">
+                <input type="password" placeholder="Пароль">
+                <input type="submit" value="Войти">
+              </form>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </div>
+          </li>
+          <li class="cart">Корзина</li>
+        </ul>
+        <!-- тут я совсем запутался, может стоит об этом устно поговорить, а может стоить подождать вебинара по формам -->
+
+
       </nav>
 
-      <div class="search">
-        <button type="button"><img src="" alt="Поиск"></button>
-      <!-- пока не знаю как сделать поиск, в тз написано, что это кнопка -->
-      </div>
-
-      <div class="user-block"><button type="button"><img src="" alt="Вход" width="" height="">Вход</button></div>
-      <!-- в тз написано, что это кнопка -->
-      <div class="basket"><img src="" alt="Корзина" width="21px" height="20px"></div>
-      <!-- не понял в каком формате все иконки в макете делать -->
-      <div class="header-contacts">
-        <p>С 10 до 20, ежедневно</p>
-        <a href="tel:+78124502525">8 812 450-25-25</a>
-      </div>
+        <div class="header-contacts">
+          <p>С 10 до 20, ежедневно</p>
+          <a href="tel:+78124502525">8 812 450-25-25</a>
+        </div>
 
     </header>
 
-    <div class="wrap">
-      <div class="slider"></div>
-    </div>
+    <main>
 
-    <div class="both-button">
-      <button>Давайте оба!</button>
-    </div>
+      <h1 class="visually-hidden">Магазин Глэйси</h1>
 
-    <div class="half-width">
-      <section class="promo1-section">
-        <h3>Малинка даром!</h3>
-        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <button>Хочу варенье!</button>
+      <section class="slider-section">
+        <ul class="slider">
+          <li><b>Крем-брюле и пломбир с малиновым джемом</b></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <!-- тут будет слайдер -->
       </section>
-    </div>
 
-    <div class="half-width">
-      <section class="promo2-section">
-        <h3>Шоколадки даром!</h3>
-        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <button>Хочу шоколадки!</button>
-      </section>
-    </div>
-
-    <div class="quarter-width">
-      <div class="product">
-        <div class="bestseller"><img src="" alt=""></div>
-        <div class="product-image"><img src="" alt=""></div>
-        <div class="price">310₽/кг</div>
-        <div class="product-name">
-          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+      <div class="both-button">
+        <button class="button">Давайте оба!</button>
+        <!-- в стайлгайде это кнопка -->
       </div>
-    </div>
-    <!-- пусть пока будет один товар-->
-
-    <section class="main-text">
-      <h4>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h4>
 
       <div class="half-width">
-        <div class="text-block-wrapper">
-          <div class="text-icon"><img src="" alt="Мороженое"></div>
-          <div class="text-block">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
+        <section class="promo1-section">
+          <h2>Малинка даром!</h2>
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <button>Хочу варенье!</button>
+        </section>
+      </div>
+
+      <div class="half-width">
+        <section class="promo2-section">
+          <h2>Шоколадки даром!</h2>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <button class="button">Хочу шоколадки!</button>
+          <!-- в стайлгайде это кнопка -->
+        </section>
+      </div>
+
+      <div class="quarter-width">
+        <div class="product-wrapper">
+          <div class="bestseller"></div>
+          <div class="product-image"><img src="" alt="Мороженое с апельсином"></div>
+          <p class="price">310₽<span>/кг</span></p>
+          <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <div class="show-on-hover"><a href="#" class="button">Быстрый просмотр</a></div>
         </div>
       </div>
-      <!-- пусть пока будет один абзац -->
-    </section>
+      <!-- пусть пока будет один товар-->
 
-    <div class="half-width">
-      <article class="blog-preview">
-        <p>Новое в нашем блоге</p>
-        <h4><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h4>
-      </article>
-    </div>
+      <section class="main-text">
+        <h4>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h4>
 
-    <div class="half-width">
-      <section class="subscription">
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form action="/echo">
-          <input type="email" placeholder="Электронная почта">
-          <input type="submit" value="Отправить">
-        </form>
-        <!-- дивы в форме -->
+        <div class="half-width">
+          <div class="text-block-wrapper">
+            <div class="text-icon"></div>
+            <!-- Судя по вебинару "контекстные" изображения надо фоном ставить. Для этого нужен отдельный контейнер, или можно вместе с текстом пихнуть? -->
+            <div class="text-block">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
+          </div>
+        </div>
+        <!-- пусть пока будет один абзац -->
       </section>
-    </div>
 
-    <div class="map-wrapper">
-      <div class="map"></div>
-
-      <div class="pin"></div>
-
-      <div class="map-contacts">
-        <p class="contacts-regular">Адрес главного офиса <br>и офлайн-магазина:</p>
-        <p class="contacts-strong">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-        <p class="contacts-regular">Для заказов по телефону:</p>
-        <a href="tel:+78124502525">8 812 450-25-25</a>
-        <p class="contacts-regular">(с 10 до 20 ежедневно)</p>
-        <button type="button">Форма обратной связи</button>
+      <div class="half-width">
+        <article class="blog-preview">
+          <p>Новое в нашем блоге</p>
+          <h4><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h4>
+        </article>
       </div>
 
-    </div>
+      <div class="half-width">
+        <section class="subscribe">
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form action="/echo">
+            <input type="email" placeholder="Электронная почта">
+            <input type="submit" value="Отправить">
+          </form>
+        </section>
+      </div>
 
-    <footer>
+      <div class="map-wrapper">
+        <div class="map"></div>
+
+        <div class="pin"></div>
+
+        <div class="map-contacts">
+          <p class="contacts">Адрес главного офиса <br>и офлайн-магазина:<br>
+          <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
+          Для заказов по телефону:<br>
+          <a href="tel:+78124502525">8 812 450-25-25</a><br>
+          (с 10 до 20 ежедневно)</p>
+          <button type="button">Форма обратной связи</button>
+        </div>
+      </div>
+
+    <!-- форма обратной связи -->
+
+    <section class="callback-form">
+      <h4>Форма обратной связи</h4>
+      <form action="/echo">
+        <input type="text" placeholder="Как вас зовут" id="username">
+        <input type="email" placeholder="Ваша почта для ответа?" id="user-email">
+        <input type="textarea" placeholder="Напишите что-нибудь..." id="user-text">
+        <input type="submit" value="Отправить">
+      </form>
+    </section>
+
+    </main>
+
+    <footer class="index-footer">
 
       <div class="social-media">
         <ul>
-          <li><a href="twitter.com"><img src="" alt="Twitter">Twitter</a></li>
-          <li><a href="Instagram"><img src="" alt="Instagram">Instagram</a></li>
-          <li><a href="Facebook"><img src="" alt="Facebook">Facebook</a></li>
-          <li><a href="vk.com"><img src="" alt="Вконтакте">Вконтакте</a></li>
+          <li><a class="social-button" href="twitter.com"></a></li>
+          <li><a class="social-button" href="instagram.com"></a></li>
+          <li><a class="social-button" href="facebook.com"></a></li>
+          <li><a class="social-button" href="vk.com"></a></li>
         </ul>
       </div>
 
       <nav class="footer-menu">
         <ul>
-          <li><a href="#"><img src="" alt="Любим своих поставщиков">Для поставщиков</a></li>
+          <li><a class="heart" href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Наши документы</a></li>
           <li><a href="#">Экологические стандарты</a></li>
@@ -145,8 +181,8 @@
       </nav>
 
       <div class="developer">
-        <img src="" alt="HTML Academy">
-        <p>Сделано в HTML Academy © 2017</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="HTML Academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
       </div>
 
     </footer>
