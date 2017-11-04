@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Глейси: каталог сливочого мороженого</title>
+</head>
+<body>
+
+  <header class="index-header">
+
+    <div class="index-logo"><a href="index.html"><img src="" alt="Gllacy Shop Logo"></a></div>
+
+    <nav class="main-menu">
+      <ul class=main-navigation>
+        <li><a class="active-menu" href="#">Каталог</a>
+          <ul class="sub-menu">
+            <li><a href="#">Новинки</a></li>
+            <li><a href="/gllacy-catalog.html">Сливочное</a></li>
+            <li><a href="#">Щербеты</a></li>
+            <li><a href="#">Фруктовый лед</a></li>
+            <li><a href="#">Мелорин</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">О Компании</a></li>
+      </ul>
+
+      <ul class="user-navigation">
+        <li class="search">
+            <form action="/echo" name="search-form">
+              <input type="search" name="search" placeholder="Что ищем?">
+              <button type="submit">
+            </form>
+        </li>
+        <li class="user-login">
+          <p>Вход</p>
+          <div class="login-form">
+            <form action="/echo" name="login-form">
+              <input type="email" name="email" placeholder="Электронная почта">
+              <input type="password" name="password" placeholder="Пароль">
+              <button type="submit" value="Войти">
+            </form>
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </div>
+        </li>
+        <li class="cart">
+          <a href="#">Корзина</a>
+          <!-- корзину размечаю наугад -->
+          <div class="cart-expand">
+            <div class="cart-row">
+              <p>X</p>
+              <img src="#" alt="">
+              <p>Пломбир с апельсиновым джемом</p>
+              <p>1,5 кг х <span>200 руб.</span></p>
+              <p>300 руб.</p>
+            </div>
+            <div class="cart-row">
+              <p>X</p>
+              <img src="#" alt="">
+              <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+              <p>1,5 кг х <span>300 руб.</span></p>
+              <p>450 руб.</p>
+            </div>
+            <p>Итого: 750 руб.</p>
+            <a class="a-button" href="#">Оформить заказ</a>
+          </div>
+
+        </li>
+      </ul>
+      </nav>
+
+      <div class="header-contacts">
+        <p>С 10 до 20, ежедневно</p>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+      </div>
+
+  </header>
+
+  <nav class="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Сливочное</a></li>
+    </ul>
+  </nav>
+  <!-- так и не понял почему в твоем faq рекомендуют смотреть бутстрап, в котором крошки размечены через ol, единственное предположение -  ol нужен, чтобы иерархичность передать  -->
+
+  <main>
+    <h1>Сливочное мороженое</h1>
+
+    <section class="catalog-filter">
+
+      <form action="/echo" name="catalog-filter">
+
+        <label for="select-id">Сортировка:</label>
+        <select name="select" id="select-id">
+          <option value="popular">по популярности</option>
+          <option value="price-low">сначала недорогие</option>
+          <option value="price-high">сначала дорогие</option>
+          <option value="fat">по жирности</option>
+        </select>
+
+        <label for="price-range">Цена: 100 руб. – 500 руб.</label>
+        <input type="range" min="100" max="500" step="50" id="price-range">
+
+        <fieldset>
+          <legend>Жирность:</legend>
+          <laber for="zero-fat">0%</label>
+          <input type="radio" name="zero" value="0%" id="zero-fat">
+          <laber for="less-10-fat">до 10%</label>
+          <input type="radio" name="less-10" value="до 10%" id="less-10-fat">
+          <laber for="less-30-fat">до 30%</label>
+          <input type="radio" name="less-30" value="до 30%" id="less-30-fat">
+          <laber for="above-30-fat">выше 30%</label>
+          <input type="radio" name="above-30" value="выше 30%" id="above-30-fat">
+        </fieldset>
+
+        <fieldset>
+          <legend>Наполнители:</legend>
+          <label for="chocolate-id">Шоколадные</label>
+          <input type="checkbox" name="chocolate" value="шоколадные" id="chocolate-id">
+          <label for="sugar-id">сахарные присыпки</label>
+          <input type="checkbox" name="sugar" value="сахарные присыпки" id="sugar-id">
+          <label for="fruit-id">фрукты</label>
+          <input type="checkbox" name="fruit" value="фрукты" id="fruit-id">
+          <label for="syrup-id">сиропы</label>
+          <input type="checkbox" name="syrup" value="сиропы" id="syrup-id">
+          <label for="jam-id">джемы</label>
+          <input type="checkbox" name="jam" value="джемы" id="jam-id">
+        </fieldset>
+
+        <button type="submit">Применить</button>
+      </form>
+
+    </section>
+
+    <section class="catalog-products">
+      <div class="product-wrapper">
+        <div class="product-image"><img src="" alt="Мороженое с апельсином"></div>
+        <p class="price">310₽<span>/кг</span></p>
+        <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+        <div class="show-on-hover"><a href="#" class="a-button">Быстрый просмотр</a></div>
+      </div>
+      <!-- пусть пока будет один товар-->
+    </section>
+
+    <section class="pagination">
+      <ul>
+        <li><a class="active-page" href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="index-footer">
+
+    <div class="social-media">
+      <ul>
+        <li><a class="social-button" href="twitter.com"></a></li>
+        <li><a class="social-button" href="instagram.com"></a></li>
+        <li><a class="social-button" href="facebook.com"></a></li>
+        <li><a class="social-button" href="vk.com"></a></li>
+      </ul>
+    </div>
+
+    <nav class="footer-menu">
+      <ul>
+        <li><a class="heart" href="#">Для поставщиков</a></li>
+        <li><a href="#">О производстве</a></li>
+        <li><a href="#">Наши документы</a></li>
+        <li><a href="#">Экологические стандарты</a></li>
+      </ul>
+      </nav>
+
+    <div class="developer">
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="HTML Academy">
+      Сделано в <span>HTML Academy</span> © 2017</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>

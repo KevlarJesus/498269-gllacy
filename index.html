@@ -27,26 +27,28 @@
 
         <ul class="user-navigation">
           <li class="search">
-              <form action=""><input type="search" placeholder="Что ищем?"></form>
+              <form action="/echo" name="search-form">
+                <input type="search" name="search" placeholder="Что ищем?">
+                <button type="submit">
+              </form>
           </li>
           <li class="user-login">
             <p>Вход</p>
             <div class="login-form">
-              <form action="/echo">
-                <input type="email" placeholder="Электронная почта">
-                <input type="password" placeholder="Пароль">
-                <input type="submit" value="Войти">
+              <form action="/echo" name="login-form">
+                <input type="email" name="email" placeholder="Электронная почта">
+                <input type="password" name="password" placeholder="Пароль">
+                <button type="submit" value="Войти">
               </form>
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
             </div>
           </li>
-          <li class="cart">Корзина</li>
+          <li class="cart">
+            <a href="#">Корзина</a>
+          </li>
         </ul>
-        <!-- тут я совсем запутался, может стоит об этом устно поговорить, а может стоить подождать вебинара по формам -->
-
-
-      </nav>
+        </nav>
 
         <div class="header-contacts">
           <p>С 10 до 20, ежедневно</p>
@@ -61,102 +63,69 @@
 
       <section class="slider-section">
         <ul class="slider">
-          <li><b>Крем-брюле и пломбир с малиновым джемом</b></li>
+          <li>
+            <img src="" alt="">
+            <b>Крем-брюле и пломбир с малиновым джемом</b>
+            <a href="#" class="a-button">Давайте оба!</a>
+          </li>
           <li></li>
           <li></li>
         </ul>
-        <!-- тут будет слайдер -->
       </section>
 
-      <div class="both-button">
-        <button class="button">Давайте оба!</button>
-        <!-- в стайлгайде это кнопка -->
-      </div>
-
-      <div class="half-width">
-        <section class="promo1-section">
+      <section class="promo-section">
+        <div class="promo1-section">
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <button>Хочу варенье!</button>
-        </section>
-      </div>
-
-      <div class="half-width">
-        <section class="promo2-section">
+          <a href="#">Хочу варенье!</a>
+        </div>
+        <div class="promo2-section">
           <h2>Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <button class="button">Хочу шоколадки!</button>
-          <!-- в стайлгайде это кнопка -->
-        </section>
-      </div>
+          <a href="#">Хочу шоколадки!</a>
+        </div>
+      </section>
 
-      <div class="quarter-width">
+      <section class="index-products">
         <div class="product-wrapper">
-          <div class="bestseller"></div>
           <div class="product-image"><img src="" alt="Мороженое с апельсином"></div>
           <p class="price">310₽<span>/кг</span></p>
           <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-          <div class="show-on-hover"><a href="#" class="button">Быстрый просмотр</a></div>
+          <div class="show-on-hover"><a href="#" class="a-button">Быстрый просмотр</a></div>
         </div>
-      </div>
-      <!-- пусть пока будет один товар-->
+        <!-- пусть пока будет один товар-->
+      </section>
 
       <section class="main-text">
         <h4>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h4>
-
-        <div class="half-width">
-          <div class="text-block-wrapper">
-            <div class="text-icon"></div>
-            <!-- Судя по вебинару "контекстные" изображения надо фоном ставить. Для этого нужен отдельный контейнер, или можно вместе с текстом пихнуть? -->
-            <div class="text-block">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
-          </div>
-        </div>
-        <!-- пусть пока будет один абзац -->
+        <div class="text-block">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</div>
       </section>
 
-      <div class="half-width">
+      <section class="blog-subscribe">
         <article class="blog-preview">
-          <p>Новое в нашем блоге</p>
-          <h4><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h4>
+          <h5>Новое в нашем блоге</h5>
+          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
-      </div>
-
-      <div class="half-width">
-        <section class="subscribe">
+        <div class="subscribe">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="/echo">
-            <input type="email" placeholder="Электронная почта">
-            <input type="submit" value="Отправить">
+            <input type="email" name="email" placeholder="Электронная почта">
+            <button type="submit" value="Отправить">
           </form>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="map-wrapper">
+      <section class="index-map">
         <div class="map"></div>
-
-        <div class="pin"></div>
-
         <div class="map-contacts">
           <p class="contacts">Адрес главного офиса <br>и офлайн-магазина:<br>
           <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
           Для заказов по телефону:<br>
-          <a href="tel:+78124502525">8 812 450-25-25</a><br>
+          <a class="map-tel" href="tel:+78124502525">8 812 450-25-25</a><br>
           (с 10 до 20 ежедневно)</p>
-          <button type="button">Форма обратной связи</button>
+          <a class="a-button" href="#">Форма обратной связи</a>
         </div>
-      </div>
-
-    <!-- форма обратной связи -->
-
-    <section class="callback-form">
-      <h4>Форма обратной связи</h4>
-      <form action="/echo">
-        <input type="text" placeholder="Как вас зовут" id="username">
-        <input type="email" placeholder="Ваша почта для ответа?" id="user-email">
-        <input type="textarea" placeholder="Напишите что-нибудь..." id="user-text">
-        <input type="submit" value="Отправить">
-      </form>
-    </section>
+      </section>
 
     </main>
 
@@ -181,11 +150,23 @@
       </nav>
 
       <div class="developer">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="HTML Academy"></a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="HTML Academy">
+        Сделано в <span>HTML Academy</span> © 2017</a>
       </div>
 
     </footer>
+
+    <!-- форма обратной связи -->
+
+    <section class="callback-form">
+      <h4>Форма обратной связи</h4>
+      <form action="/echo" name="callback-form">
+        <input type="text" name="name" placeholder="Как вас зовут" id="username">
+        <input type="email" name="email" placeholder="Ваша почта для ответа?" id="user-email">
+        <input type="textarea" name="textarea" placeholder="Напишите что-нибудь..." id="user-text">
+        <button type="submit" value="Отправить">
+      </form>
+    </section>
 
   </body>
 </html>
