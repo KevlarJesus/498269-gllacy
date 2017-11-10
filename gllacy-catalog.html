@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Глейси: каталог сливочого мороженого</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="index-header">
 
-    <a class="logo" href="index.html"><img src="img/logo.svg" alt="Gllacy Shop Logo" width="154px" height="64px"></a>
+    <a class="logo" href="index.html"><img src="img/logo.svg" alt="Логотип Глейси" width="154px" height="64px"></a>
 
     <nav class="main-menu">
       <ul class=main-navigation>
         <li><a class="active-menu" href="#">Каталог</a>
-          <ul class="sub-menu">
+          <ul class="sub-menu" tabindex="1">
             <li><a href="#">Новинки</a></li>
             <li><a href="/gllacy-catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -29,18 +30,18 @@
 
       <ul class="user-navigation">
         <li class="search">
-            <form action="/echo" name="search-form">
+            <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
               <input type="search" name="search" placeholder="Что ищем?">
-              <button type="submit"></button>
+              <button type="submit">Найти</button>
             </form>
         </li>
         <li class="user-login">
           <p>Вход</p>
           <div class="login-form">
-            <form action="/echo" name="login-form">
+            <form action="https://echo.htmlacademy.ru" method="post" name="login-form">
               <input type="email" name="email" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль">
-              <button type="submit" value="Войти"></button>
+              <button type="submit" value="Войти">Войти</button>
             </form>
             <a href="#">Забыли пароль?</a>
             <a href="#">Новая регистрация</a>
@@ -48,10 +49,9 @@
         </li>
         <li class="cart">
           <a href="#">Корзина</a>
-          <!-- корзину размечаю наугад -->
           <div class="cart-expand">
             <div class="cart-row">
-              <a href="#" class="cross">X</a>
+              <a href="#"><img src="img/cross-small.svg" alt="удалить товар" width="11px" height="11px"></a>
               <img src="#" alt="Пломбир с апельсиновым джемом">
               <p>Пломбир с апельсиновым джемом</p>
               <p>1,5 кг х <span>200 руб.</span></p>
@@ -91,7 +91,7 @@
 
     <section class="catalog-filter">
 
-      <form action="/echo" name="catalog-filter">
+      <form action="https://echo.htmlacademy.ru" method="get"> name="catalog-filter">
 
         <label for="select-id">Сортировка:</label>
         <select name="select" id="select-id">
@@ -106,14 +106,14 @@
 
         <fieldset>
           <legend>Жирность:</legend>
-          <label for="zero-fat">0%</label>
-          <input type="radio" name="zero" value="0%" id="zero-fat">
-          <label for="less-10-fat">до 10%</label>
-          <input type="radio" name="less-10" value="до 10%" id="less-10-fat">
-          <label for="less-30-fat">до 30%</label>
-          <input type="radio" name="less-30" value="до 30%" id="less-30-fat">
-          <label for="above-30-fat">выше 30%</label>
-          <input type="radio" name="above-30" value="выше 30%" id="above-30-fat">
+          <label for="fat-zero-fat">0%</label>
+          <input type="radio" name="fat-radio" value="0%" id="fat-zero-fat">
+          <label for="fat-less-10-fat">до 10%</label>
+          <input type="radio" name="fat-radio" value="до 10%" id="fat-less-10-fat">
+          <label for="fat-less-30-fat">до 30%</label>
+          <input type="radio" name="fat-radio" value="до 30%" id="fat-less-30-fat">
+          <label for="fat-above-30-fat">выше 30%</label>
+          <input type="radio" name="fat-radio" value="выше 30%" id="fat-above-30-fat">
         </fieldset>
 
         <fieldset>
@@ -130,12 +130,12 @@
           <input type="checkbox" name="jam" value="джемы" id="jam-id">
         </fieldset>
 
-        <button type="submit" value="Применить"></button>
+        <button type="submit" value="Применить">Применить</button>
       </form>
 
     </section>
 
-    <section class="catalog-products">
+    <section class="catalog-products" aria-label="Каталог товаров">
       <div class="product">
         <div class="product-image"><img src="img/product01.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267px" height="267px"></div>
         <p class="price">310₽<span>/кг</span></p>
@@ -221,7 +221,7 @@
       </div>
     </section>
 
-    <section class="pagination">
+    <section class="pagination" aria-label="Страницы каталога товаров">
       <ul>
         <li><a class="active-page" href="#">1</a></li>
         <li><a href="#">2</a></li>
@@ -237,10 +237,10 @@
 
     <div class="social-media">
       <ul>
-        <li><a class="social-button" href="twitter.com"></a></li>
-        <li><a class="social-button" href="instagram.com"></a></li>
-        <li><a class="social-button" href="facebook.com"></a></li>
-        <li><a class="social-button" href="vk.com"></a></li>
+        <li><a class="social-button" href="twitter.com" aria-label="Твиттер"></a></li>
+        <li><a class="social-button" href="instagram.com" aria-label="Инстаграм"></a></li>
+        <li><a class="social-button" href="facebook.com" aria-label="Фейсбук"></a></li>
+        <li><a class="social-button" href="vk.com" aria-label="Вконтакте"></a></li>
       </ul>
     </div>
 

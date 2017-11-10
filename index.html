@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Глейси — магазин мороженого</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="index-header">
 
-      <a class="logo"><img src="img/logo.svg" alt="Gllacy Shop Logo" width="154px" height="64px"></a>
+      <a class="logo"><img src="img/logo.svg" alt="Логотип Глейси" width="154px" height="64px"></a>
 
       <nav class="main-menu">
         <ul class=main-navigation>
@@ -27,18 +28,18 @@
 
         <ul class="user-navigation">
           <li class="search">
-              <form action="/echo" name="search-form">
+              <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
                 <input type="search" name="search" placeholder="Что ищем?">
-                <button type="submit"></button>
+                <button type="submit">Найти</button>
               </form>
           </li>
           <li class="user-login">
             <p>Вход</p>
             <div class="login-form">
-              <form action="/echo" name="login-form">
+              <form action="https://echo.htmlacademy.ru" method="post" name="login-form">
                 <input type="email" name="email" placeholder="Электронная почта">
                 <input type="password" name="password" placeholder="Пароль">
-                <button type="submit" value="Войти"></button>
+                <button type="submit" value="Войти">Войти</button>
               </form>
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
@@ -140,9 +141,9 @@
         </article>
         <div class="subscribe">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form action="/echo">
+          <form action="https://echo.htmlacademy.ru" method="get">
             <input type="email" name="email" placeholder="Электронная почта">
-            <button type="submit" value="Отправить"></button>
+            <button type="submit" value="Отправить">Отправить</button>
           </form>
         </div>
       </section>
@@ -165,10 +166,10 @@
 
       <div class="social-media">
         <ul>
-          <li><a class="social-button" href="twitter.com"></a></li>
-          <li><a class="social-button" href="instagram.com"></a></li>
-          <li><a class="social-button" href="facebook.com"></a></li>
-          <li><a class="social-button" href="vk.com"></a></li>
+          <li><a class="social-button" href="twitter.com" aria-label="Твиттер"></a></li>
+          <li><a class="social-button" href="instagram.com" aria-label="Инстаграм"></a></li>
+          <li><a class="social-button" href="facebook.com" aria-label="Фейсбук"></a></li>
+          <li><a class="social-button" href="vk.com" aria-label="Вконтакте"></a></li>
         </ul>
       </div>
 
@@ -192,11 +193,11 @@
 
     <section class="callback-form">
       <h4>Форма обратной связи</h4>
-      <form action="/echo" name="callback-form">
+      <form action="https://echo.htmlacademy.ru" method="post" name="callback-form">
         <input type="text" name="name" placeholder="Как вас зовут" id="username">
         <input type="email" name="email" placeholder="Ваша почта для ответа?" id="user-email">
         <input type="textarea" name="textarea" placeholder="Напишите что-нибудь..." id="user-text">
-        <button type="submit" value="Отправить"></button>
+        <button type="submit" value="Отправить">Отправить</button>
       </form>
     </section>
 
