@@ -1,33 +1,41 @@
 body {
-  font-family: "Roboto", sans-serif;
-  padding: 0%, 2.3%;
+  font-family: "Roboto", "Arial", sans-serif;
   background-color: #849d8f;
   color: white;
+  min-width: 1200px;
 }
+
+/* text headers */
 
 h1 {
-  font-size: 60px;
-  font-weight: bold;
-}
-
-h2 {
   font-size: 35px;
   font-weight: bold;
 }
 
-h3, h5 {
-  font-size: 16px;
-  font-weight:  normal;
+.promo-header {
+  font-size: 35px;
+  font-weight: bold;
 }
 
-h4 {
+.product-name {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.main-text-header {
   font-size: 24px;
-  font-weight:  normal;
+  font-weight: normal;
+  color: #323232;
+}
+
+.blog-previev-header {
+  font-size: 16px;
+  font-weight: normal;
 }
 
 h6 {
   font-size: 14px;
-  font-weight:  normal;
+  font-weight: normal;
 }
 
 .visually-hidden {
@@ -40,12 +48,17 @@ h6 {
 
 /* header */
 
-header {
+.index-header {
   display: flex;
   flex-direction: row;
+  margin: 0px 27px;
 }
 
-header li {
+.logo {
+  width: 178px;
+}
+
+.index-header li {
   list-style: none;
 }
 
@@ -54,11 +67,26 @@ header li {
   flex-direction: row;
 }
 
-.main-navigation > li > a {
+.main-navigation a {
   font-size: 16px;
   font-weight: bold;
   color: white;
+  margin-right: 25px;
 }
+
+.user-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-contacts {
+
+}
+/* не могу понять как этот блок нужно спозиционировать.
+Можно обернуть его в контейнер и через флекс-дирекшн развернуть.
+Правильно ли это будет? */
+
+/* main menu dropdown */
 
 .sub-menu {
   display: none;
@@ -68,13 +96,6 @@ header li {
     display: flex;
     flex-direction: column;
 }
-
-.main-navigation > li:focus .sub-menu {
-    display: flex;
-    flex-direction: column;
-}
-
-/* не понял как заставить меню выпадать через tab */
 
 .sub-menu a {
   font-size: 14px;
@@ -94,10 +115,10 @@ header li {
 
 /* promo */
 
-/* bestsellers */
+/* products */
 
-h3 a {
-  color: white;
+.product-name a {
   line-height: 22px;
   text-align: center;
+  color: white;
 }
