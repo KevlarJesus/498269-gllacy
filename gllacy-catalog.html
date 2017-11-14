@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Глейси: каталог сливочого мороженого</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 
@@ -62,8 +64,8 @@
               <p>1,5 кг х <span>300 руб.</span></p>
               <p>450 руб.</p>
             </div>
-            <p>Итого: 750 руб.</p>
-            <a class="link-button" href="#">Оформить заказ</a>
+            <p class="total">Итого: 750 руб.</p>
+            <a class="medium-button red-button" href="#">Оформить заказ</a>
           </div>
         </li>
       </ul>
@@ -85,11 +87,11 @@
   </nav>
 
   <main>
-    <h1>Сливочное мороженое</h1>
+    <h1 class="catalog-header">Сливочное мороженое</h1>
 
     <section class="catalog-filter">
 
-      <form action="https://echo.htmlacademy.ru" method="get"> name="catalog-filter">
+      <form action="https://echo.htmlacademy.ru" method="get" name="catalog-filter">
 
         <label for="select-id">Сортировка:</label>
         <select name="select" id="select-id">
@@ -138,84 +140,84 @@
         <div class="product-image"><img src="img/product01.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267px" height="267px"></div>
         <p class="price">310₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product02.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267px" height="267px"></div>
         <p class="price">380₽<span>/кг</span></p>
-        <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <h3 class="product-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3 class="product-name">
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product03.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267px" height="267px"></div>
         <p class="price">355₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product04.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267px" height="267px"></div>
         <p class="price">415₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product05.jpg" alt="Сливочное с брусничным джемом" width="267px" height="267px"></div>
         <p class="price">325₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочное с брусничным джемом</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product06.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267px" height="267px"></div>
         <p class="price">410₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочно-черничное с цельными ягодами черники </a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product07.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267px" height="267px"></div>
         <p class="price">375₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product08.jpg" alt="Сливочное с шоколадной стружкой" width="267px" height="267px"></div>
         <p class="price">320₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочное с шоколадной стружкой</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product09.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267px" height="267px"></div>
         <p class="price">440₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product10.jpg" alt="Сливочноe с ментоловым сиропом" width="267px" height="267px"></div>
         <p class="price">435₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочноe с ментоловым сиропом</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product11.jpg" alt="Сливочное с кусочками черного шоколада" width="267px" height="267px"></div>
         <p class="price">355₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочное с кусочками черного шоколада</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
 
       <div class="product">
         <div class="product-image"><img src="img/product12.jpg" alt="Сливочное с мятным сиропом" width="267px" height="267px"></div>
         <p class="price">420₽<span>/кг</span></p>
         <h3 class="product-name"><a href="#">Сливочное с мятным сиропом</a></h3 class="product-name">
-        <div class="show-on-hover"><a href="#" class="link-button">Быстрый просмотр</a></div>
+        <div class="show-on-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
       </div>
     </section>
 

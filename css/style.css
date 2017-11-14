@@ -1,41 +1,16 @@
 body {
+  margin: 0px;
+  padding: 0px;
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 22px;
   background-color: #849d8f;
   color: white;
-  min-width: 1200px;
+  padding: 9px 27px 9px 27px;
 }
 
-/* text headers */
-
-h1 {
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.promo-header {
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.product-name {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.main-text-header {
-  font-size: 24px;
-  font-weight: normal;
-  color: #323232;
-}
-
-.blog-previev-header {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-h6 {
-  font-size: 14px;
-  font-weight: normal;
+a {
+  color: white;
 }
 
 .visually-hidden {
@@ -51,27 +26,29 @@ h6 {
 .index-header {
   display: flex;
   flex-direction: row;
-  margin: 0px 27px;
-}
-
-.logo {
-  width: 178px;
 }
 
 .index-header li {
   list-style: none;
 }
 
-.main-navigation, .user-navigation {
+.main-menu {
   display: flex;
   flex-direction: row;
 }
 
+.main-navigation > li {
+  display: inline-block;
+}
+/* не понял почему блочно-строчные элементы не показываются в строчку*/
+
 .main-navigation a {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 18px;
   color: white;
-  margin-right: 25px;
+  margin: 0px 25px 0px 0px;
+  padding: 0px;
 }
 
 .user-navigation {
@@ -79,12 +56,16 @@ h6 {
   flex-direction: row;
 }
 
-.header-contacts {
-
+.header-contacts p {
+  font-size: 14px;
+  line-height: 16px;
 }
-/* не могу понять как этот блок нужно спозиционировать.
-Можно обернуть его в контейнер и через флекс-дирекшн развернуть.
-Правильно ли это будет? */
+
+.header-contacts a {
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
+}
 
 /* main menu dropdown */
 
@@ -96,29 +77,341 @@ h6 {
     display: flex;
     flex-direction: column;
 }
+/* не понял как тут укоротить селектор */
+
+.sub-menu:hover {
+  display: flex;
+  flex-direction: column;
+}
+/* не понял как заставить не прятаться меню */
+
+.sub-menu {
+  position: absolute;
+  top: 60px;
+  left: 185px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  max-width: 140px;
+  margin: 0px;
+  padding: 15px 15px 5px 20px;
+  box-shadow: 0px 15px 20px 0 rgba(0, 0, 0, 0.4);
+}
 
 .sub-menu a {
+  display: inline-block;
   font-size: 14px;
-  font-weight: normal;
+  line-height: 16px;
+  font-weight: 400;
   color: black;
   text-decoration: none;
+  margin-right: 0px;
+  margin-bottom: 10px;
 }
 
 .sub-menu li:first-child a {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   color: black;
-  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.sub-menu li:first-child a::after {
+  content:'';
+  display: block;
+  width: 120px;
+  height: 1px;
+  position: absolute;
+  top: 45px;
+  left: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* slider */
 
-/* promo */
+.slider-section {
+  max-width: 720px;
+}
+
+.slider-section b {
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+}
+
+.slider-section li {
+  list-style: none;
+  text-align: center;
+}
+
+/* red buttons */
+
+.red-button {
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.5em 1.4em;
+  color: white;
+  background-image: linear-gradient(to bottom, #f16743, #e54a35);
+  box-shadow: 0 2px 5px 0 #ac1000;
+}
+
+.red-button:hover {
+  background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+  box-shadow: 0 2px 5px 0 #ac1000;
+}
+
+.red-button:active {
+  background-image: linear-gradient(to bottom, #e74a35, #f26843);
+  box-shadow: inset 0 2px 2px 0 #942718;
+}
+
+.big-button {
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 0px 2px 5px #ac1000;
+}
+
+/* promo section */
+
+.promo-header {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.promo-section p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.medium-button {
+  font-size: 18px;
+  font-weight: 700;
+}
 
 /* products */
 
-.product-name a {
+.product-name {
+  font-size: 16px;
+  font-weight: normal;
   line-height: 22px;
   text-align: center;
-  color: white;
+}
+
+.price {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.price span {
+  font-size: 30px;
+}
+
+/* main text */
+
+.main-text-header {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.main-text-block {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+}
+
+/* blog */
+
+.blog-previev-header {
+  color: black;
+  font-size: 16px;
+  line-height: 22px;
+
+}
+
+.blog-preview a {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+/* subsribe */
+
+.subscribe p {
+  font-size: 16px;
+  font-weight: 22px;
+  color: #5a5a5a;
+}
+
+/* map */
+
+.contacts {
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+}
+
+.contacts span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.map-tel {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #323232;
+}
+
+/* footer */
+
+.index-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-media li {
+  list-style: none;
+}
+
+.footer-menu li {
+  list-style: none;
+}
+
+.footer-menu a {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.developer a {
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.developer span {
+  text-decoration: underline;
+}
+
+/* callback form */
+
+.callback-form h4 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #323232;
+}
+
+/* catalog header */
+
+/* catalog cart */
+
+.cart-row p {
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+}
+
+.cart-row span {
+  color: #999999;
+}
+
+.total {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+}
+
+/* catalog main */
+
+.catalog-header {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs li {
+  list-style: none;
+  display: inline-block;
+}
+
+.breadcrumb-active a {
+  text-decoration: none;
+}
+
+/* catalog filter */
+
+/* catalog products */
+
+/* catalog pagination */
+
+
+.pagination ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+
+.pagination a {
+	color: white;
+	text-decoration: none;
+  padding: 5px 10px;
+	margin: 0px 2px;
+	position: relative;
+}
+
+.pagination .active-page {
+	color: black;
+	background: white;
+	border-radius: 50%;
+}
+
+.pagination a:hover:not(.active-page) {
+	background: #9db1a5;
+	border-radius: 50%;
+}
+
+.pagination li:last-child a:before, .pagination li:last-child a:after, .pagination li:first-child a:before, .pagination li:first-child a:after {
+  content:'';
+  display: block;
+  width: 8px;
+  height: 2px;
+  position: absolute;
+}
+
+.pagination li:first-child a:before {
+  transform: rotate(-45deg);
+  top: 10px;
+	background-color: #9bafa4;
+  left: -17px;
+}
+
+.pagination li:first-child a:after{
+  transform: rotate(45deg);
+  top: 15px;
+	background-color: #9bafa4;
+  left: -17px;
+}
+
+.pagination li:last-child a:before {
+  transform: rotate(225deg);
+  top: 10px;
+	background-color: white;
+  right: -17px;
+}
+
+.pagination li:last-child a:after{
+  transform: rotate(-45deg);
+  top: 15px;
+	background-color: white;
+  right: -17px;
 }
