@@ -13,6 +13,11 @@ a {
   color: white;
 }
 
+.global-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -37,10 +42,14 @@ a {
   flex-direction: row;
 }
 
-.main-navigation > li {
-  display: inline-block;
+.main-navigation {
+  display: flex;
+  flex-direction: row;
 }
-/* не понял почему блочно-строчные элементы не показываются в строчку*/
+
+.main-navigation > li {
+  padding: 0px 0px 20px 0px;
+}
 
 .main-navigation a {
   font-size: 16px;
@@ -73,17 +82,10 @@ a {
   display: none;
 }
 
-.main-navigation > li:hover .sub-menu {
+.sub-menu-container:hover .sub-menu {
     display: flex;
     flex-direction: column;
 }
-/* не понял как тут укоротить селектор */
-
-.sub-menu:hover {
-  display: flex;
-  flex-direction: column;
-}
-/* не понял как заставить не прятаться меню */
 
 .sub-menu {
   position: absolute;
@@ -126,6 +128,85 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* main menu search */
+
+.search form {
+  display: inline-block;
+  padding: 0 0 30px 280px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.search form:hover input {
+  display: inline-block;
+}
+
+.search input {
+  display: none;
+  top: 50px;
+  left: 0;
+  position: absolute;
+  width: 310px;
+  height: 42px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 14px 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.search input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.search button {
+  background-color: #e6ebe9;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-image: url("img/search.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+/* login form */
+
+.login:hover + .login-form {
+  display: inline-block;
+}
+
+.login-form {
+  display: none;
+  position: absolute;
+  width: 237px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.login-form input {
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 14px 14px;
+  margin-bottom: 20px;
+}
+
+.login-form input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.login-form a {
+  font-size: 13px;
+  line-height: 24px;
+  color: #000;
+}
+
 /* slider */
 
 .slider-section {
@@ -147,6 +228,7 @@ a {
 
 .red-button {
   text-decoration: none;
+  border: 0;
   border-radius: 50px;
   padding: 0.5em 1.4em;
   color: white;
@@ -190,6 +272,14 @@ a {
 }
 
 /* products */
+
+.bestsellers,
+.catalog-products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 .product-name {
   font-size: 16px;
@@ -246,6 +336,19 @@ a {
   font-size: 16px;
   font-weight: 22px;
   color: #5a5a5a;
+}
+
+.subscribe input {
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 14px 14px;
+}
+
+.subscribe input::placeholder {
+  color: #999;
+  font-weight: 400;
 }
 
 /* map */
@@ -306,6 +409,20 @@ a {
   font-size: 24px;
   line-height: 28px;
   color: #323232;
+  font-weight: 400;
+}
+
+.callback-form input {
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 14px 14px;
+}
+
+.callback-form input::placeholder {
+  color: #999;
+  font-weight: 400;
 }
 
 /* catalog header */
@@ -380,7 +497,10 @@ a {
 	border-radius: 50%;
 }
 
-.pagination li:last-child a:before, .pagination li:last-child a:after, .pagination li:first-child a:before, .pagination li:first-child a:after {
+.pagination li:last-child a:before,
+.pagination li:last-child a:after,
+.pagination li:first-child a:before,
+.pagination li:first-child a:after {
   content:'';
   display: block;
   width: 8px;
