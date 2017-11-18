@@ -6,7 +6,6 @@ body {
   line-height: 22px;
   background-color: #849d8f;
   color: white;
-  padding: 9px 27px 9px 27px;
 }
 
 a {
@@ -27,7 +26,6 @@ a {
 }
 
 /* header */
-
 .index-header {
   display: flex;
   flex-direction: row;
@@ -40,15 +38,12 @@ a {
 .main-menu {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .main-navigation {
   display: flex;
   flex-direction: row;
-}
-
-.main-navigation > li {
-  padding: 0px 0px 20px 0px;
 }
 
 .main-navigation a {
@@ -63,6 +58,13 @@ a {
 .user-navigation {
   display: flex;
   flex-direction: row;
+  margin-left: auto;
+}
+
+/* Я запутался в флексах Т_Т суть в том, что я задаю тут левый маргин авто, а родителю (.main-menu) задал ширину 100%. Верно ли это? И как */
+
+.header-contacts {
+  align-self: flex-end;
 }
 
 .header-contacts p {
@@ -131,23 +133,17 @@ a {
 /* main menu search */
 
 .search form {
-  display: inline-block;
-  padding: 0 0 30px 280px;
-  box-sizing: border-box;
-  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
 }
 
 .search form:hover input {
-  display: inline-block;
+  display: flex;
 }
 
 .search input {
   display: none;
-  top: 50px;
-  left: 0;
-  position: absolute;
-  width: 310px;
-  height: 42px;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   padding: 14px 14px;
@@ -171,6 +167,7 @@ a {
   background-position: center;
   border: none;
 }
+
 
 /* login form */
 
@@ -211,6 +208,7 @@ a {
 
 .slider-section {
   max-width: 720px;
+  /* margin-top: -190px; */
 }
 
 .slider-section b {
@@ -279,6 +277,11 @@ a {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.product {
+  margin: auto;
+  width: 250px;
 }
 
 .product-name {
