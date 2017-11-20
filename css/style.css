@@ -61,7 +61,7 @@ a {
   margin-left: auto;
 }
 
-/* Я запутался в флексах Т_Т суть в том, что я задаю тут левый маргин авто, а родителю (.main-menu) задал ширину 100%. Верно ли это? И как */
+/* Я запутался в флексах Т_Т суть в том, что я задаю тут левый маргин авто, а родителю (.main-menu) задал ширину 100%. Верно ли это? */
 
 .header-contacts {
   align-self: flex-end;
@@ -161,7 +161,7 @@ a {
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  background-image: url("img/search.svg");
+  background-image: url('/img/search.svg');
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -207,10 +207,21 @@ a {
 /* slider */
 
 .slider-section {
-  max-width: 720px;
-  /* margin-top: -190px; */
+  margin: 0 auto;
 }
 
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.slider li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .slider-section b {
   font-size: 60px;
   line-height: 60.35px;
@@ -252,6 +263,25 @@ a {
 
 /* promo section */
 
+.promo-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.promo1-section {
+  width: 50%;
+  background: #3f0c17 url('/img/raspberries.jpg') no-repeat;
+  background-size: cover;
+}
+
+.promo2-section {
+  width: 50%;
+  background: #422a1f url('/img/chocolate.jpg') no-repeat;
+  background-size: cover;
+}
+
 .promo-header {
   font-size: 35px;
   font-weight: 700;
@@ -284,6 +314,13 @@ a {
   width: 250px;
 }
 
+.product-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 266px;
+  height: 266px;
+}
+
 .product-name {
   font-size: 16px;
   font-weight: normal;
@@ -304,6 +341,11 @@ a {
 
 /* main text */
 
+.main-text {
+  background: #e9dbbf url('/img/waffle-pattern.jpg') repeat;
+  overflow: hidden;
+}
+
 .main-text-header {
   font-size: 24px;
   line-height: 30px;
@@ -317,13 +359,26 @@ a {
   color: #323232;
 }
 
+/* blog-subscribe */
+
+.blog-subscribe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* blog */
+
+.blog-preview {
+  width: 50%;
+  background: #ffffff url('/img/strawberry.png') no-repeat;
+  background-position: center;
+}
 
 .blog-previev-header {
   color: black;
   font-size: 16px;
   line-height: 22px;
-
 }
 
 .blog-preview a {
@@ -334,6 +389,20 @@ a {
 }
 
 /* subsribe */
+
+.subscribe-wrapper {
+  width: 50%;
+  background: repeating-linear-gradient(135deg, white 0px, white 10px, #92cdff 10px, #92cdff 20px, white 20px, white 30px, #fe9e90 30px, #fe9e90 40px);
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.subscribe {
+  background-color: #f8f7f4;
+  border-radius: 7px;
+  margin: 0px;
+  padding: 22px 33px;
+}
 
 .subscribe p {
   font-size: 16px;
@@ -354,7 +423,17 @@ a {
   font-weight: 400;
 }
 
-/* map */
+/* index map */
+
+.map {
+  background-image: url('/img/map.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.map-contacts {
+  background: #ffffff;
+}
 
 .contacts {
   font-size: 14px;
@@ -381,10 +460,54 @@ a {
 .index-footer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-media ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .social-media li {
   list-style: none;
+}
+
+.social-button {
+  background-color: white;
+  border: 2px solid #c2cec7;
+  padding: 5px 15px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.social-button:hover {
+  opacity: 1;
+}
+
+.social-button:active {
+  opacity: 0.9;
+  border: 2px solid #dee0df;
+}
+
+.twitter {
+  background: url('/img/twitter.svg');
+  background-position: center;
+}
+
+.instagram {
+  background: url('/img/instagram.svg');
+  background-position: center;
+}
+
+.facebook {
+  background: url('/img/facebook.svg');
+  background-position: center;
+}
+
+.vk {
+  background: url('/img/vk.svg');
+  background-position: center;
 }
 
 .footer-menu li {
@@ -407,6 +530,10 @@ a {
 }
 
 /* callback form */
+
+.callback-form {
+  background-color: #f8f7f4;
+}
 
 .callback-form h4 {
   font-size: 24px;
@@ -432,6 +559,16 @@ a {
 
 /* catalog cart */
 
+.cart-expand {
+  background-color: #f8f7f4;
+}
+
+.cart-row .cart-product {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .cart-row p {
   font-size: 13px;
   line-height: 16px;
