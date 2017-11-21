@@ -272,21 +272,27 @@ a {
   margin-bottom: 38px;
 }
 
-.promo1-section {
+.promo-container {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  background: #3f0c17 url('/img/raspberries.jpg') no-repeat;
   background-size: cover;
+  margin: 0;
   margin-right: 27px;
   border-radius: 15px;
   padding: 20px;
 }
 
-.promo2-section {
-  width: 50%;
+.promo-container a {
+  align-self: flex-end;
+}
+
+.promo-container:nth-child(1) {
+    background: #3f0c17 url('/img/raspberries.jpg') no-repeat;
+}
+
+.promo-container:nth-child(2) {
   background: #422a1f url('/img/chocolate.jpg') no-repeat;
-  background-size: cover;
-  border-radius: 15px;
-  padding: 20px;
 }
 
 .promo-header {
@@ -295,14 +301,16 @@ a {
   line-height: 41px;
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
 }
 
-.promo-section p {
+.promo-container p {
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
   margin: 0;
-  padding: 22px 0;
+  margin-bottom: 50px;
+  padding: 0;
 }
 
 /* products */
@@ -318,6 +326,7 @@ a {
 .product {
   margin: auto;
   width: 250px;
+  min-height: 335px;
 }
 
 .product-image {
@@ -325,13 +334,7 @@ a {
   overflow: hidden;
   width: 266px;
   height: 266px;
-}
-
-.product-name {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
-  text-align: center;
+  margin-bottom: -50px;
 }
 
 .price {
@@ -339,17 +342,38 @@ a {
   font-weight: 700;
   line-height: 45px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .price span {
   font-size: 30px;
 }
 
+.product-name {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 28px;
+  padding: 0;
+}
+
+.product-hover {
+  display: none;
+}
+
+
 /* main text */
 
 .main-text {
   background: #e9dbbf url('/img/waffle-pattern.jpg') repeat;
+  border-radius: 15px;
   overflow: hidden;
+  padding: 22px 20px 0px 20px;
+  margin-bottom: 40px;
 }
 
 .main-text-header {
@@ -357,12 +381,30 @@ a {
   line-height: 30px;
   font-weight: 400;
   color: #323232;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.main-text-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .main-text-block {
   font-size: 16px;
   line-height: 22px;
   color: #323232;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
 }
 
 /* blog-subscribe */
@@ -371,27 +413,38 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 35px;
 }
-
 /* blog */
 
 .blog-preview {
   width: 50%;
+  min-height: 160px;
   background: #ffffff url('/img/strawberry.png') no-repeat;
-  background-position: center;
+  background-position: -10px -230px;
+  border-radius: 15px;
+  margin-right: 27px;
+  padding: 30px 20px;
 }
 
 .blog-previev-header {
   color: black;
   font-size: 16px;
   line-height: 22px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .blog-preview a {
+  display: inline-flex;
   color: black;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+  padding: 0;
+  margin: 0;
+  width: 290px;
 }
 
 /* subsribe */
@@ -404,6 +457,7 @@ a {
 }
 
 .subscribe {
+  min-height: 180px;;
   background-color: #f8f7f4;
   border-radius: 7px;
   margin: 0px;
@@ -416,12 +470,18 @@ a {
   color: #5a5a5a;
 }
 
+.subscribe form {
+  display: flex;
+  flex-direction: row;
+}
+
 .subscribe input {
   font-size: 16px;
   font-weight: 700;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   padding: 14px 14px;
+  flex-grow: 1;
 }
 
 .subscribe input::placeholder {
@@ -432,35 +492,59 @@ a {
 /* index map */
 
 .map {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   background-image: url('/img/map.jpg');
   background-size: cover;
   background-position: center;
+  width: 100%;
+  min-height: 370px;
+  padding: 60px 0;
+  margin-right: 25px;
 }
 
 .map-contacts {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
+  width: 260px;
+  min-height:  235px;
+  border-radius: 15px;
+  padding: 25px 20px;
 }
 
 .contacts {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .contacts span {
+  display: inline-flex;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  padding: 0px 0px 13px 0px;
+  margin: 0;
 }
 
 .map-tel {
+  display: inline-flex;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
   color: #323232;
+  margin: 6px 0 0 0;
 }
 
+.map-contacts a {
+
+}
 /* footer */
 
 .index-footer {
