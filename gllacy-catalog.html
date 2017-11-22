@@ -10,10 +10,10 @@
 <body>
   <div class="global-wrapper">
 
-    <header class="index-header">
-      <a class="logo" href="index.html"><img src="img/logo.svg" alt="Логотип Глейси" width="154px" height="64px"></a>
+    <header class="catalog-header container">
 
       <nav class="main-menu">
+        <a class="logo" href="index.html"><img src="img/logo.svg" alt="Логотип Глейси" width="154px" height="64px"></a>
         <ul class=main-navigation>
           <li class="sub-menu-container"><a class="active-menu" href="#">Каталог</a>
             <ul class="sub-menu" tabindex="1">
@@ -31,7 +31,9 @@
         <ul class="user-navigation">
           <li class="search">
               <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
-                <input type="search" name="search" placeholder="Что ищем?">
+                <div class="search-wrapper">
+                  <input type="search" name="search" placeholder="Что ищем?">
+                </div>
                 <button type="submit"></button>
               </form>
           </li>
@@ -78,16 +80,16 @@
 
     </header>
 
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li class="breadcrumb-active"><a href="#">Сливочное</a></li>
-      </ol>
-    </nav>
+    <main class="container">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li class="breadcrumb-active"><a href="#">Сливочное</a></li>
+        </ol>
+      </nav>
 
-    <main>
-      <h1 class="catalog-header">Сливочное мороженое</h1>
+      <h1 class="catalog-h1">Сливочное мороженое</h1>
 
       <section class="catalog-filter">
 
@@ -147,7 +149,7 @@
           <div class="product-image"><img src="img/product02.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267px" height="267px"></div>
           <p class="price">380₽<span>/кг</span></p>
           <h3 class="product-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3 class="product-name">
-          <div class="product-hover visually-hidden"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
+          <div class="product-hover"><a href="#" class="medium-button red-button">Быстрый просмотр</a></div>
         </div>
 
         <div class="product">
