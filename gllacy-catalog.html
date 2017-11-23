@@ -73,7 +73,7 @@
         </ul>
       </nav>
 
-      <div class="header-contacts">
+      <div class="header-contacts catalog-header-contacts">
         <p>С 10 до 20, ежедневно</p>
         <a href="tel:+78124502525">8 812 450-25-25</a>
       </div>
@@ -94,45 +94,48 @@
       <section class="catalog-filter">
 
         <form action="https://echo.htmlacademy.ru" method="get" name="catalog-filter">
+          <div class="catalog-filter-wrapper">
+            <label for="select-id">Сортировка:</label>
+            <select name="select" id="select-id">
+              <option value="popular">по популярности</option>
+              <option value="price-low">сначала недорогие</option>
+              <option value="price-high">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
 
-          <label for="select-id">Сортировка:</label>
-          <select name="select" id="select-id">
-            <option value="popular">по популярности</option>
-            <option value="price-low">сначала недорогие</option>
-            <option value="price-high">сначала дорогие</option>
-            <option value="fat">по жирности</option>
-          </select>
+            <label for="price-range">Цена: 100 руб. – 500 руб.</label>
+            <input type="range" min="100" max="500" step="50" id="price-range">
 
-          <label for="price-range">Цена: 100 руб. – 500 руб.</label>
-          <input type="range" min="100" max="500" step="50" id="price-range">
+            <fieldset>
+              <legend>Жирность:</legend>
+              <label for="fat-zero-fat">0%</label>
+              <input type="radio" name="fat-radio" value="0%" id="fat-zero-fat">
+              <label for="fat-less-10-fat">до 10%</label>
+              <input type="radio" name="fat-radio" value="до 10%" id="fat-less-10-fat">
+              <label for="fat-less-30-fat">до 30%</label>
+              <input type="radio" name="fat-radio" value="до 30%" id="fat-less-30-fat">
+              <label for="fat-above-30-fat">выше 30%</label>
+              <input type="radio" name="fat-radio" value="выше 30%" id="fat-above-30-fat">
+            </fieldset>
+          </div>
 
-          <fieldset>
-            <legend>Жирность:</legend>
-            <label for="fat-zero-fat">0%</label>
-            <input type="radio" name="fat-radio" value="0%" id="fat-zero-fat">
-            <label for="fat-less-10-fat">до 10%</label>
-            <input type="radio" name="fat-radio" value="до 10%" id="fat-less-10-fat">
-            <label for="fat-less-30-fat">до 30%</label>
-            <input type="radio" name="fat-radio" value="до 30%" id="fat-less-30-fat">
-            <label for="fat-above-30-fat">выше 30%</label>
-            <input type="radio" name="fat-radio" value="выше 30%" id="fat-above-30-fat">
-          </fieldset>
+          <div class="catalog-filter-wrapper">
+            <fieldset>
+              <legend>Наполнители:</legend>
+              <label for="chocolate-id">Шоколадные</label>
+              <input type="checkbox" name="chocolate" value="шоколадные" id="chocolate-id">
+              <label for="sugar-id">сахарные присыпки</label>
+              <input type="checkbox" name="sugar" value="сахарные присыпки" id="sugar-id">
+              <label for="fruit-id">фрукты</label>
+              <input type="checkbox" name="fruit" value="фрукты" id="fruit-id">
+              <label for="syrup-id">сиропы</label>
+              <input type="checkbox" name="syrup" value="сиропы" id="syrup-id">
+              <label for="jam-id">джемы</label>
+              <input type="checkbox" name="jam" value="джемы" id="jam-id">
+            </fieldset>
 
-          <fieldset>
-            <legend>Наполнители:</legend>
-            <label for="chocolate-id">Шоколадные</label>
-            <input type="checkbox" name="chocolate" value="шоколадные" id="chocolate-id">
-            <label for="sugar-id">сахарные присыпки</label>
-            <input type="checkbox" name="sugar" value="сахарные присыпки" id="sugar-id">
-            <label for="fruit-id">фрукты</label>
-            <input type="checkbox" name="fruit" value="фрукты" id="fruit-id">
-            <label for="syrup-id">сиропы</label>
-            <input type="checkbox" name="syrup" value="сиропы" id="syrup-id">
-            <label for="jam-id">джемы</label>
-            <input type="checkbox" name="jam" value="джемы" id="jam-id">
-          </fieldset>
-
-          <button type="submit" value="Применить">Применить</button>
+            <button type="submit" value="Применить">Применить</button>
+          </div>
         </form>
 
       </section>
@@ -235,7 +238,7 @@
 
     </main>
 
-    <footer class="index-footer">
+    <footer class="index-footer container">
 
       <div class="social-media">
         <ul>
@@ -248,16 +251,20 @@
 
       <nav class="footer-menu">
         <ul>
-          <li><a class="heart" href="#">Для поставщиков</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
+          <div class="footer-menu-wrapper">
+            <li><a class="heart" href="#">Для поставщиков</a></li>
+            <li><a href="#">О производстве</a></li>
+          </div>
+          <div class="footer-menu-wrapper">
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
+          </div>
         </ul>
-        </nav>
+      </nav>
 
       <div class="developer">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="HTML Academy" width="108px" height="39px">
-        Сделано в <span>HTML Academy</span> © 2017</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="HTML Academy" width="125px" height="39px"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в <span>HTML Academy</span> © 2017</a>
       </div>
 
     </footer>

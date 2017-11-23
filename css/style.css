@@ -30,7 +30,6 @@ a {
 .index-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: -145px;
 }
 
 .index-header li {
@@ -92,14 +91,16 @@ a {
 
 /* header contacts */
 
+.index-header-contacts {
+  margin-bottom: -145px;
+}
+
 .header-contacts {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   align-self: flex-end;
 }
-/* так и не смог поднять этот блок выше */
-
 
 .header-contacts p {
   font-size: 14px;
@@ -338,7 +339,6 @@ a {
   width: 50%;
   background-size: cover;
   margin: 0;
-  margin-right: 27px;
   border-radius: 15px;
   padding: 20px;
 }
@@ -349,6 +349,7 @@ a {
 
 .promo-container:nth-child(1) {
     background: #3f0c17 url('../img/raspberries.jpg') no-repeat;
+    margin-right: 27px;
 }
 
 .promo-container:nth-child(2) {
@@ -431,7 +432,7 @@ a {
   background: #e9dbbf url('../img/waffle-pattern.jpg') repeat;
   border-radius: 15px;
   overflow: hidden;
-  padding: 22px 20px 0px 20px;
+  padding: 30px 20px;
   margin-bottom: 40px;
 }
 
@@ -442,7 +443,6 @@ a {
   color: #323232;
   padding: 0;
   margin: 0;
-  margin-bottom: 28px;
 }
 
 .main-text-wrapper {
@@ -454,6 +454,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 50%;
+  position: relative;
 }
 
 .main-text-block {
@@ -461,32 +462,48 @@ a {
   line-height: 22px;
   color: #323232;
   margin: 0;
-  padding: 0;
-  margin-bottom: 25px;
+  padding: 30px 50px 0px 50px;
+
 }
 
 .block-first:before {
-  content:'';
+  content: url(../img/icecream-icon.svg);
   display: block;
-  background: url(../img/icecream-icon.svg);
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: -5px;
 }
 
 .block-second:before {
-  content:'';
+  content: url(../img/leave-icon.svg);
   display: block;
-  background-image: url(../img/cow-icon.svg);
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 110px;
+  left: -5px;
 }
 
 .block-third:before {
-  content:'';
+  content: url(../img/cow-icon.svg);
   display: block;
-  background-image: url(../img/leave-icon.svg);
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: -5px;
 }
 
 .block-fourth:before {
-  content:'';
+  content: url(../img/thermometer-icon.svg);
   display: block;
-  background-image: url(../img/thermometer-icon.svg);
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 110px;
+  left: -5px;
 }
 
 
@@ -575,9 +592,6 @@ a {
 /* index map */
 
 .map {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
   background-image: url('../img/map.jpg');
   background-size: cover;
   background-position: center;
@@ -586,6 +600,12 @@ a {
   padding: 60px 0;
   margin-right: 25px;
   margin: 0;
+}
+
+.map .container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 .map-contacts {
@@ -635,7 +655,6 @@ a {
   align-items: center;
   padding: 35px 0;
 }
-/* не понимаю почему снизу фтера отступ больше */
 
 .social-media ul {
   display: flex;
@@ -710,8 +729,36 @@ a {
   line-height: 18px;
 }
 
+
 .heart {
   font-weight: 700;
+  position: relative;
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  width: 8px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: 1px;
+}
+
+.heart:before {
+  transform: rotate(-45deg);
+  left: -17px;
+}
+
+.heart:after {
+  transform: rotate(45deg);
+  left: -14px;
+}
+
+.developer {
+  display: flex;
+  flex-direction: column;
 }
 
 .developer a {
@@ -735,6 +782,7 @@ a {
   line-height: 28px;
   color: #323232;
   font-weight: 400;
+  margin: 0
 }
 
 .callback-form form {
@@ -758,6 +806,10 @@ a {
 
 /* catalog header */
 
+.catalog-header-contacts {
+  margin-bottom: -25px;
+}
+
 .catalog-header {
   display: flex;
   flex-direction: column;
@@ -772,6 +824,21 @@ a {
 .cart-expand {
   background-color: #f8f7f4;
   display: none;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+
+.cart:hover .cart-expand {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+
+.cart-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .cart-row .cart-product {
@@ -795,6 +862,11 @@ a {
   line-height: 18px;
   font-weight: 700;
   color: #323232;
+  align-self: flex-end;
+}
+
+.cart-expand .medium-button {
+  align-self: flex-end;
 }
 
 /* catalog main */
@@ -807,9 +879,42 @@ a {
 
 /* breadcrumbs */
 
+.breadcrumbs ol {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
 .breadcrumbs li {
+  padding-right: 20px;
   list-style: none;
-  display: inline-block;
+  position: relative;
+}
+
+.breadcrumbs li:not(.breadcrumb-active):before,
+.breadcrumbs li:not(.breadcrumb-active):after {
+  content:'';
+  display: block;
+  width: 5px;
+  height: 1px;
+  position: absolute;
+}
+
+.breadcrumbs li:before {
+  transform: rotate(45deg);
+  top: 8px;
+	background-color: white;
+  left: 66px;
+  box-shadow: 3px -3px 0 0 white;
+}
+
+.breadcrumbs li:after {
+  transform: rotate(-45deg);
+  top: 11px;
+	background-color: white;
+  left: 66px;
+  box-shadow: 3px 3px 0 0 white;
 }
 
 .breadcrumb-active a {
@@ -818,15 +923,31 @@ a {
 
 /* catalog filter */
 
+.catalog-filter form {
+  display: flex
+  flex-direction: column;
+}
+
+.catalog-filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* catalog products */
 
 /* catalog pagination */
 
+.pagination {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .pagination ul {
 	display: flex;
 	flex-direction: row;
 	list-style: none;
+  margin: 0;
 }
 
 .pagination a {
