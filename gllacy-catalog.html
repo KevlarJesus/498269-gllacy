@@ -111,46 +111,61 @@
 
         <form action="https://echo.htmlacademy.ru" method="get" name="catalog-filter">
           <div class="catalog-filter-wrapper">
-            <label for="select-id">Сортировка:</label>
-            <select name="select" id="select-id">
-              <option value="popular">по популярности</option>
-              <option value="price-low">сначала недорогие</option>
-              <option value="price-high">сначала дорогие</option>
-              <option value="fat">по жирности</option>
-            </select>
+            <div class="select-id-wrapper">
+              <select name="select" id="select-id" class="catalog-select">
+                <option value="popular">по популярности</option>
+                <option value="price-low">сначала недорогие</option>
+                <option value="price-high">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+              <label for="select-id">Сортировка:</label>
+            </div>
 
-            <label for="price-range">Цена: 100 руб. – 500 руб.</label>
-            <input type="range" min="100" max="500" step="50" id="price-range">
+            <div class="price-range-wrapper">
+              <label for="price-range">Цена: 100 руб. – 500 руб.</label>
+              <input type="range" min="100" max="500" step="50" id="price-range">
+              <div class="price-range-inner-wrapper">
+                <div class="scale"></div>
+                <div class="scale-toggled"></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
 
-            <fieldset>
+            <fieldset class="fat-select">
               <legend>Жирность:</legend>
-              <label for="fat-zero-fat">0%</label>
-              <input type="radio" name="fat-radio" value="0%" id="fat-zero-fat">
-              <label for="fat-less-10-fat">до 10%</label>
-              <input type="radio" name="fat-radio" value="до 10%" id="fat-less-10-fat">
-              <label for="fat-less-30-fat">до 30%</label>
-              <input type="radio" name="fat-radio" value="до 30%" id="fat-less-30-fat">
-              <label for="fat-above-30-fat">выше 30%</label>
-              <input type="radio" name="fat-radio" value="выше 30%" id="fat-above-30-fat">
+              <div class="fat-select-wrapper">
+                <input type="radio" name="fat-radio" value="0%" id="fat-zero-fat" class="fat-select-radio">
+                <label for="fat-zero-fat">0%</label>
+                <input type="radio" name="fat-radio" value="до 10%" id="fat-less-10-fat" class="fat-select-radio">
+                <label for="fat-less-10-fat">до 10%</label>
+                <input type="radio" name="fat-radio" value="до 30%" id="fat-less-30-fat" class="fat-select-radio">
+                <label for="fat-less-30-fat">до 30%</label>
+                <input type="radio" name="fat-radio" value="выше 30%" id="fat-above-30-fat" class="fat-select-radio">
+                <label for="fat-above-30-fat">выше 30%</label>
+              </div>
             </fieldset>
+
           </div>
 
           <div class="catalog-filter-wrapper">
-            <fieldset>
+            <fieldset class="fill-select">
               <legend>Наполнители:</legend>
-              <label for="chocolate-id">Шоколадные</label>
-              <input type="checkbox" name="chocolate" value="шоколадные" id="chocolate-id">
-              <label for="sugar-id">сахарные присыпки</label>
-              <input type="checkbox" name="sugar" value="сахарные присыпки" id="sugar-id">
-              <label for="fruit-id">фрукты</label>
-              <input type="checkbox" name="fruit" value="фрукты" id="fruit-id">
-              <label for="syrup-id">сиропы</label>
-              <input type="checkbox" name="syrup" value="сиропы" id="syrup-id">
-              <label for="jam-id">джемы</label>
-              <input type="checkbox" name="jam" value="джемы" id="jam-id">
+              <div class="fill-select-wrapper">
+                <input type="checkbox" name="chocolate" value="шоколадные" id="chocolate-id" class="fill-select-checkbox">
+                <label for="chocolate-id">шоколадные</label>
+                <input type="checkbox" name="sugar" value="сахарные присыпки" id="sugar-id" class="fill-select-checkbox">
+                <label for="sugar-id">сахарные присыпки</label>
+                <input type="checkbox" name="fruit" value="фрукты" id="fruit-id" class="fill-select-checkbox">
+                <label for="fruit-id">фрукты</label>
+                <input type="checkbox" name="syrup" value="сиропы" id="syrup-id" class="fill-select-checkbox">
+                <label for="syrup-id">сиропы</label>
+                <input type="checkbox" name="jam" value="джемы" id="jam-id" class="fill-select-checkbox">
+                <label for="jam-id">джемы</label>
+              </div>
             </fieldset>
 
-            <button type="submit" value="Применить">Применить</button>
+            <button type="submit" value="Применить" class="catalog-filter-button">Применить</button>
           </div>
         </form>
 
