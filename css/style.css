@@ -12,24 +12,21 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 1146px;
   margin: 0 auto;
-  padding: 0 2.3%;
+  padding: 0 27px;
 }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -49,6 +46,10 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+}
+
+.main-menu .logo {
+  margin-right: 10px;
 }
 
 .main-menu li {
@@ -72,6 +73,7 @@ input[type="radio"].visually-hidden {
   color: white;
   margin: 0px;
   padding: 7px 12px;
+  padding-right: 17px;
 }
 
 .main-navigation .main-menu-button {
@@ -79,7 +81,7 @@ input[type="radio"].visually-hidden {
   border-radius: 50px;
 }
 
-.main-menu-button:hover {
+.sub-menu-container:hover .main-menu-button {
   color: #333333;
   text-decoration: none;
   background: #ffffff;
@@ -142,10 +144,11 @@ input[type="radio"].visually-hidden {
   position: absolute;
   background-color: rgba(248, 247, 244, 1);
   border-radius: 5px;
-  width: 145px;
+  width: 143px;
   margin: 0;
-  padding: 10px 0px;
-  top: 32px;
+  padding: 4px 0px;
+  top: 30px;
+  left: -7px;
   box-shadow: 0px 15px 20px 0 rgba(0, 0, 0, 0.4);
   z-index: 5;
 }
@@ -160,12 +163,12 @@ input[type="radio"].visually-hidden {
 }
 
 .sub-menu li {
-  padding: 0 20px;
-  margin: 4px 0;
+  padding: 4px 20px;
+  margin-top: 1px;
 }
 
 .sub-menu li:first-child {
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 }
 
 .sub-menu li:first-child a {
@@ -174,14 +177,14 @@ input[type="radio"].visually-hidden {
   color: black;
 }
 
-.sub-menu li:first-child a::after {
+.sub-menu li:first-child a:after {
   content:'';
   display: block;
-  width: 125px;
+  width: 127px;
   height: 1px;
   position: absolute;
-  top: 45px;
-  left: 12px;
+  top: 40px;
+  left: 6px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -254,7 +257,7 @@ input[type="radio"].visually-hidden {
   display: block;
   position: absolute;
   top: 36px;
-  width: 340px;
+  width: 310px;
 }
 
 .search input {
@@ -290,6 +293,12 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+/* form basic */
+.form-basic input:hover {
+  border-color: #c7c6c5;
+  border-width: 2px;
+}
+
 /* login form */
 
 .user-login {
@@ -301,9 +310,10 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   background: rgba(255, 255, 255, 0.3);
-  padding: 7px 15px;
+  padding: 7px 15px 7px 17px;
   border-radius: 20px;
   white-space: pre;
+  vertical-align: middle;
 }
 
 .user-login:hover .login {
@@ -926,7 +936,8 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .social-media ul {
@@ -943,10 +954,12 @@ input[type="radio"].visually-hidden {
 }
 
 .social-button {
-  background-color: white;
-  border: 2px solid #c2cec7;
-  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid ;
+  padding: 16px 16px;
+  border-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
+  font-size: 0;
   opacity: 0.8;
 }
 
@@ -955,27 +968,27 @@ input[type="radio"].visually-hidden {
 }
 
 .social-button:active {
-  opacity: 0.9;
-  border: 2px solid #dee0df;
+  opacity: 0.8;
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .twitter {
-  background: url('../img/twitter.svg');
+  background: url('../img/twitter.svg') no-repeat;
   background-position: center;
 }
 
 .instagram {
-  background: url('../img/instagram.svg');
+  background: url('../img/instagram.svg') no-repeat;
   background-position: center;
 }
 
 .facebook {
-  background: url('../img/facebook.svg');
+  background: url('../img/facebook.svg') no-repeat;
   background-position: center;
 }
 
 .vk {
-  background: url('../img/vk.svg');
+  background: url('../img/vk.svg') no-repeat;
   background-position: center;
 }
 
@@ -1044,10 +1057,56 @@ input[type="radio"].visually-hidden {
   text-decoration: underline;
 }
 
+/* modal */
+
+.modal {
+  position: fixed;
+  z-index: 100;
+}
+
 /* callback form */
 
 .callback-form {
+  display: none;
   background-color: #f8f7f4;
+  top: 140px;
+  left: 50%;
+  margin-left: -237px;
+  padding: 17px 25px 30px 25px;
+  border-radius: 5px;
+  width: 427px;
+
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.modal-close:before,
+.modal-close:after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 3px;
+  background-color: #000;
+  top: 7px;
+  right: -2px;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
 }
 
 .callback-form h4 {
@@ -1055,7 +1114,8 @@ input[type="radio"].visually-hidden {
   line-height: 28px;
   color: #323232;
   font-weight: 400;
-  margin: 0
+  margin: 0;
+  margin-bottom: 18px;
 }
 
 .callback-form form {
@@ -1069,12 +1129,30 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-  padding: 14px 14px;
+  padding: 12px 12px;
+  margin-bottom: 20px;
+  width: 265px;
+  box-sizing: border-box;
 }
+
+.callback-form input[type="textarea"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* почему атрибут rows не работает? */
 
 .callback-form input::placeholder {
   color: #999;
   font-weight: 400;
+}
+
+.callback-button {
+  font-weight: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  align-self: flex-end;
+  padding: 10px 25px;
+  border-radius: 50px;
 }
 
 /* catalog header */
@@ -1100,15 +1178,15 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 8px 15px 8px 40px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 35px 8px 45px;
   border-radius: 20px;
 }
 
 .empty-cart:before {
   position: absolute;
   top: 6px;
-  right: 60px;
+  right: 80px;
   content: url(../img/cart-empty-icon.svg);
 }
 
