@@ -114,7 +114,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
 }
 
 .header-contacts a {
@@ -157,7 +157,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  color: black;
+  color: #323232;
   text-decoration: none;
   padding: 0;
 }
@@ -198,6 +198,10 @@ input[type="radio"].visually-hidden {
 
 .sub-menu-current {
   background: rgba(202, 112, 88, 1);
+}
+
+.sub-menu-current a {
+  color: white;
 }
 
 /* user navigation */
@@ -297,6 +301,7 @@ input[type="radio"].visually-hidden {
 .form-basic input:hover {
   border-color: #c7c6c5;
   border-width: 2px;
+  padding: 13px;
 }
 
 /* login form */
@@ -426,11 +431,15 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   width: 17px;
   height: 17px;
-  margin-right: 8px;
+  margin-right: 4px;
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background-color: rgba(255, 255, 255, 0.3)
 }
 
 .slider {
@@ -521,14 +530,6 @@ input[type="radio"].visually-hidden {
   border-radius: 30px;
 }
 
-.promo-button {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  padding: 11px 22px;
-  border-radius: 30px;
-}
-
 .product-button {
   font-size: 18px;
   line-height: 24px;
@@ -574,7 +575,7 @@ input[type="radio"].visually-hidden {
   background-size: cover;
   margin: 0;
   border-radius: 15px;
-  padding: 20px;
+  padding: 18px 20px 24px 20px;
 }
 
 .promo-container a {
@@ -582,8 +583,8 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-container:nth-child(1) {
-    background: #3f0c17 url('../img/raspberries.jpg') no-repeat;
-    margin-right: 27px;
+  background: #3f0c17 url('../img/raspberries.jpg') no-repeat;
+  margin-right: 27px;
 }
 
 .promo-container:nth-child(2) {
@@ -596,7 +597,7 @@ input[type="radio"].visually-hidden {
   line-height: 41px;
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .promo-container p {
@@ -604,8 +605,16 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   padding: 0;
+}
+
+.promo-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 30px;
 }
 
 /* products */
@@ -726,8 +735,8 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
   color: #323232;
   margin: 0;
-  padding: 20px 10px 0 57px;
-
+  padding: 20px 0 0 0;
+  margin-left: 55px;
 }
 
 .block-first:before {
@@ -783,7 +792,6 @@ input[type="radio"].visually-hidden {
 
 .blog-preview {
   width: 50%;
-  min-height: 140px;
   background: #ffffff url('../img/strawberry.png') no-repeat;
   background-position: -10px -230px;
   border-radius: 15px;
@@ -797,7 +805,7 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
   padding: 0;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .blog-preview a {
@@ -811,21 +819,27 @@ input[type="radio"].visually-hidden {
   width: 290px;
 }
 
+.blog-preview a:hover {
+  color: #ffbc9e;
+}
+
+.blog-preview a:active {
+  color: #ffbc9e;
+}
 /* subsribe */
 
 .subscribe-wrapper {
   width: 50%;
   background: repeating-linear-gradient(135deg, white 0px, white 10px, #92cdff 10px, #92cdff 20px, white 20px, white 30px, #fe9e90 30px, #fe9e90 40px);
-  border-radius: 7px;
+  border-radius: 10px;
   padding: 5px;
 }
 
 .subscribe {
-  min-height: 180px;;
   background-color: #f8f7f4;
   border-radius: 7px;
   margin: 0px;
-  padding: 22px 33px;
+  padding: 12px 22px 30px 22px;
 }
 
 .subscribe p {
@@ -846,8 +860,8 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-  padding: 13px 14px;
-  margin-right: 10px;
+  padding: 14px 14px;
+  margin-right: 13px;
   flex-grow: 1;
 }
 
@@ -1015,6 +1029,13 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
+.index-footer a:hover {
+  color: #ffbc9e;
+}
+
+.index-footer a:active {
+  color: #ffbc9e;
+}
 
 .heart {
   font-weight: 700;
@@ -1224,22 +1245,23 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 37px;
+  top: 36px;
   right: 0px;
-  min-width: 530px;
+  width: 510px;
 }
 
 .cart-row {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: baseline;
+  padding-top: 5px;
+  margin-bottom: 15px;
 }
 
 .cart-expand:after {
   content: '';
   position: absolute;
-  top: 120px;
+  top: 130px;
   left: 15px;
   width: 95%;
   height: 1px;
@@ -1247,8 +1269,9 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 }
 
-.cart-cross {
-  margin-right: 13px;
+.cart-row .cart-cross {
+  margin-right: 15px;
+  align-self: flex-start;
 }
 
 .cart-row .cart-product {
@@ -1257,6 +1280,7 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 13px;
+  align-self: flex-start;
 }
 
 .cart-row p {
@@ -1265,37 +1289,39 @@ input[type="radio"].visually-hidden {
   color: #323232;
 }
 
-.cart-name {
+.cart-row .cart-name {
   display: inline-flex;
-  margin-right: 30px;
+  width: 220px;
+  margin-right: 26px;
 }
-/* марджин не работает */
 
-.cart-weight {
+.cart-row .cart-weight {
   display: inline-flex;
   width: 105px;
-  margin-right: 30px;
+  margin-right: 20px;
+  white-space: pre;
 }
 
 .cart-row span {
   color: #999999;
 }
 
-
-
-.total {
+.cart-expand .total {
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
   color: #323232;
   align-self: flex-end;
-  margin: 15px;
+  padding: 15px 0px;
 }
-/* марджин не работает */
 
-.cart-expand .medium-button {
+.cart-expand .cart-button {
   align-self: flex-end;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
   padding: 10px 15px;
+  border-radius: 30px;
 }
 
 /* catalog main */
@@ -1307,6 +1333,14 @@ input[type="radio"].visually-hidden {
 }
 
 /* breadcrumbs */
+
+.breadcrumbs a:hover {
+  color: #ffbc9e;
+}
+
+.breadcrumbs a:active {
+  color: #ffbc9e;
+}
 
 .breadcrumbs ol {
   display: flex;
