@@ -363,6 +363,7 @@ input[type="radio"].visually-hidden {
 
   display: block;
   top: 36px;
+  right: 0px;
   width: 310px;
 }
 
@@ -2169,6 +2170,10 @@ input[type="radio"].visually-hidden {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: rgba(225, 225, 225, 0.3);
+}
+
+.catalog-select::-ms-expand {
+  display: none;
 }
 
 .catalog-select:hover {
