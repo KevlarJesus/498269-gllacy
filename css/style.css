@@ -893,7 +893,7 @@ input[type="radio"].visually-hidden {
 }
 
 .bestsellers {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .product {
@@ -2093,7 +2093,7 @@ input[type="radio"].visually-hidden {
 /* catalog filter */
 
 .catalog-filter {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .catalog-filter form {
