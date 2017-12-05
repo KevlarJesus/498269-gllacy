@@ -2196,6 +2196,10 @@ input[type="radio"].visually-hidden {
   border-radius: 20px;
   border: none;
 
+  background-image: url(../img/arrow-white.svg);
+  background-repeat: no-repeat;
+  background-position: 170px center;
+
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2208,41 +2212,16 @@ input[type="radio"].visually-hidden {
 
 .catalog-select-wrapper:hover .catalog-select {
   color: #000000;
+  background-image: url(../img/arrow-black.svg);
 }
 
 .catalog-select-wrapper .catalog-select:focus {
   color: #000000;
+  background-image: url(../img/arrow-black.svg);
 }
 
 .catalog-select-wrapper {
   position: relative;
-}
-
-.catalog-select-wrapper:after {
-  content: "";
-
-  position: absolute;
-  right: 15px;
-  top: 44px;
-
-  display: -webkit-inline-box;
-
-  display: -webkit-inline-flex;
-
-  display: -ms-inline-flexbox;
-
-  display: inline-flex;
-
-  border: 5px solid transparent;
-  border-top: 10px solid #ffffff;
-}
-
-.catalog-select-wrapper:hover:after {
-  border-top: 10px solid #000000;
-}
-
-.catalog-select:focus .catalog-select-wrapper:after {
-  border-top: 10px solid #000000;
 }
 
 /* price range */
