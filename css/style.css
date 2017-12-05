@@ -2184,6 +2184,10 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.catalog-select-wrapper .catalog-select:focus {
+  color: #000000;
+}
+
 .catalog-select-wrapper {
   position: relative;
 }
@@ -2208,6 +2212,10 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-select-wrapper:hover:after {
+  border-top: 10px solid #000000;
+}
+
+.catalog-select:focus .catalog-select-wrapper:after {
   border-top: 10px solid #000000;
 }
 
