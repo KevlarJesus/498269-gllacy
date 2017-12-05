@@ -363,6 +363,7 @@ input[type="radio"].visually-hidden {
 
   display: block;
   top: 36px;
+  right: 0px;
   width: 310px;
 }
 
@@ -1436,6 +1437,10 @@ input[type="radio"].visually-hidden {
 }
 
 .social-media li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-right: 15px;
 
   list-style: none;
@@ -2171,7 +2176,11 @@ input[type="radio"].visually-hidden {
   background-color: rgba(225, 225, 225, 0.3);
 }
 
-.catalog-select:hover {
+.catalog-select::-ms-expand {
+  display: none;
+}
+
+.catalog-select-wrapper:hover .catalog-select {
   color: #000000;
 }
 

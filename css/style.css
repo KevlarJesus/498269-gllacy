@@ -1437,6 +1437,10 @@ input[type="radio"].visually-hidden {
 }
 
 .social-media li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-right: 15px;
 
   list-style: none;
@@ -2176,7 +2180,7 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.catalog-select:hover {
+.catalog-select-wrapper:hover .catalog-select {
   color: #000000;
 }
 
