@@ -2588,7 +2588,6 @@ input[type="radio"].visually-hidden {
 	flex-direction: row;
   padding: 0;
   margin: 0;
-  margin-right: 20px;
 
   list-style: none;
 }
@@ -2610,7 +2609,9 @@ input[type="radio"].visually-hidden {
 	border-radius: 50%;
 }
 
-.pagination a:hover:not(.active-page) {
+.pagination a:hover:not(.active-page),
+.pagination a:hover:not(.previous-page-link),
+.pagination a:hover:not(.next-page-link), {
 	background: rgba(255, 255, 255 ,0.3);
 	border-radius: 50%;
 }
@@ -2625,16 +2626,25 @@ input[type="radio"].visually-hidden {
 
 .pagination .previous-page-link,
 .pagination .next-page-link  {
+  display: inline-flex;
+  width: 12px;
+  height: 20px;
   margin: 0;
   padding: 0;
-
-  font-size: 0;
 }
 
-.pagination .previous-page:before,
-.pagination .previous-page:after,
-.pagination .next-page:before,
-.pagination .next-page:after {
+.pagination .next-page {
+  margin-left: 10px;
+}
+
+.pagination .previous-page {
+  margin-right: 10px;
+}
+
+.pagination .previous-page-link:before,
+.pagination .previous-page-link:after,
+.pagination .next-page-link:before,
+.pagination .next-page-link:after {
   content:"";
 
   position: absolute;
@@ -2644,9 +2654,9 @@ input[type="radio"].visually-hidden {
   height: 1px;
 }
 
-.pagination .previous-page:before {
+.pagination .previous-page-link:before {
   top: 8px;
-  left: -25px;
+  left: 0;
 
   background-color: rgba(255, 255, 255 ,0.3);
   -webkit-transform: rotate(-45deg);
@@ -2654,9 +2664,9 @@ input[type="radio"].visually-hidden {
   transform: rotate(-45deg);
 }
 
-.pagination .previous-page:after{
+.pagination .previous-page-link:after{
   top: 13px;
-  left: -25px;
+  left: 0;
 
 	background-color: rgba(255, 255, 255 ,0.3);
   -webkit-transform: rotate(45deg);
@@ -2664,9 +2674,9 @@ input[type="radio"].visually-hidden {
   transform: rotate(45deg);
 }
 
-.pagination .next-page:before {
+.pagination .next-page-link:before {
   top: 8px;
-  right: -20px;
+  right: 0;
 
 	background-color: #ffffff;
   -webkit-transform: rotate(225deg);
@@ -2674,9 +2684,9 @@ input[type="radio"].visually-hidden {
   transform: rotate(225deg);
 }
 
-.pagination .next-page:after{
+.pagination .next-page-link:after{
   top: 13px;
-  right: -20px;
+  right: 0;
 
 	background-color: #ffffff;
   -webkit-transform: rotate(-45deg);
