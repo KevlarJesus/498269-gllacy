@@ -762,7 +762,7 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 2px 5px 0 #ac1000;
 }
 
-.button button:active {
+.button:active {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e74a35), to(#f26843));
   background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
   background-image: -o-linear-gradient(top, #e74a35, #f26843);
@@ -857,6 +857,7 @@ input[type="radio"].visually-hidden {
 
 /* products */
 
+/* autoprefix */
 .bestsellers,
 .catalog-products {
   display: -webkit-box;
@@ -868,10 +869,9 @@ input[type="radio"].visually-hidden {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -899,6 +899,11 @@ input[type="radio"].visually-hidden {
 
   width: 267px;
   min-height: 335px;
+  margin-right: 26px;
+}
+
+.product:nth-child(4n) {
+  margin-right: 0;
 }
 
 .inner-product {
@@ -1249,7 +1254,7 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe input:hover {
-  padding: 0px 9px;
+  height: 40px;
 
   border-color: #c7c6c5;
   border-width: 2px;
@@ -1257,7 +1262,6 @@ input[type="radio"].visually-hidden {
 
 .subscribe-button {
   padding: 8px 18px;
-  margin-bottom: 12px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1625,7 +1629,6 @@ input[type="radio"].visually-hidden {
 /* callback form */
 
 .callback-form {
-
   top: 140px;
   left: 50%;
 
@@ -1636,6 +1639,10 @@ input[type="radio"].visually-hidden {
 
   background-color: #f8f7f4;
   border-radius: 5px;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal-close {
