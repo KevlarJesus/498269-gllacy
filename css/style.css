@@ -1068,6 +1068,8 @@ input[type="radio"].visually-hidden {
 }
 
 .main-text-block {
+  position: relative;
+
   padding: 0;
   padding-top: 22px;
   margin: 0;
@@ -1082,8 +1084,8 @@ input[type="radio"].visually-hidden {
   content: url(../img/icecream-icon.svg);
 
   position: absolute;
-  top: 8px;
-  left: 0px;
+  top: 10px;
+  left: -55px;
 
   display: block;
   width: auto;
@@ -1094,8 +1096,8 @@ input[type="radio"].visually-hidden {
   content: url(../img/leave-icon.svg);
 
   position: absolute;
-  top: 96px;
-  left: 0px;
+  top: 10px;
+  left: -55px;
 
   display: block;
   width: auto;
@@ -1106,8 +1108,8 @@ input[type="radio"].visually-hidden {
   content: url(../img/cow-icon.svg);
 
   position: absolute;
-  top: 8px;
-  left: 0px;
+  top: 10px;
+  left: -58px;
 
   display: block;
   width: auto;
@@ -1118,8 +1120,8 @@ input[type="radio"].visually-hidden {
   content: url(../img/thermometer-icon.svg);
 
   position: absolute;
-  top: 96px;
-  left: 0px;
+  top: 10px;
+  left: -58px;
 
   display: block;
   width: auto;
@@ -1205,17 +1207,17 @@ input[type="radio"].visually-hidden {
 
 .subscribe {
   margin: 0px;
-  padding: 12px 22px 30px 22px;
+  padding: 12px 22px 37px 22px;
 
   background-color: #f8f7f4;
   border-radius: 7px;
 }
 
 .subscribe p {
-  margin-bottom: 34px;
+  margin-bottom: 36px;
 
   font-size: 16px;
-  font-weight: 22px;
+  line-height: 22px;
   color: #5a5a5a;
 }
 
@@ -1261,8 +1263,9 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe-button {
-  padding: 8px 18px;
+  padding: 9px 18px;
 
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
 
@@ -1638,9 +1641,12 @@ input[type="radio"].visually-hidden {
 }
 
 .wrapper-black {
+  top: 0;
+  left: 0;
+
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.7);
 }

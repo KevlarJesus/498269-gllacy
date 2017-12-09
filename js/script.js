@@ -7,6 +7,7 @@ var close = popup.querySelector('.modal-close');
 var wrapperBlack = document.querySelector('.wrapper-black');
 
 var form = popup.querySelector('form');
+var modalName = popup.querySelector('[name=name]');
 var modalText = popup.querySelector('[name=textarea]');
 var modalEmail = popup.querySelector('[name=email]');
 
@@ -20,6 +21,7 @@ callbackBtn.addEventListener('click', function (evt) {
 close.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.remove('modal-show');
+  wrapperBlack.classList.remove('wrapper-show');
 });
 
 form.addEventListener('submit', function (evt) {
@@ -33,6 +35,7 @@ window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (popup.classList.contains('modal-show')) {
       popup.classList.remove('modal-show');
+      wrapperBlack.classList.remove('wrapper-show');
     };
   };
 });
