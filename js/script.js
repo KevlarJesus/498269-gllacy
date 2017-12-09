@@ -4,6 +4,8 @@ var popup = document.querySelector('.callback-form');
 
 var close = popup.querySelector('.modal-close');
 
+var wrapperBlack = document.querySelector('.wrapper-black');
+
 var form = popup.querySelector('form');
 var modalText = popup.querySelector('[name=textarea]');
 var modalEmail = popup.querySelector('[name=email]');
@@ -12,6 +14,7 @@ callbackBtn.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.add('modal-show');
   modalName.focus();
+  wrapperBlack.classList.add('wrapper-show');
 });
 
 close.addEventListener('click', function (evt) {
