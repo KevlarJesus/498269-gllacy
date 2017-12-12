@@ -2398,7 +2398,9 @@ input[type="radio"].visually-hidden {
 }
 
 .fat-select input[type=radio] {
-  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .fat-select-radio:not(checked) + label {
@@ -2427,6 +2429,10 @@ input[type="radio"].visually-hidden {
   border-color: rgba(255, 255, 255, 1);
 }
 
+.fat-select-radio:focus + label:before {
+  border-color: rgba(255, 255, 255, 1);
+}
+
 .fat-select-radio:not(checked):disabled + label:before {
   border-color: rgba(255, 255, 255, 0.3);
 }
@@ -2446,6 +2452,10 @@ input[type="radio"].visually-hidden {
 }
 
 .fat-select-radio:checked:hover + label:after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.fat-select-radio:checked:focus + label:after {
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -2470,7 +2480,9 @@ input[type="radio"].visually-hidden {
 }
 
 .fill-select input[type=checkbox] {
-  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .fill-select-wrapper {
@@ -2519,6 +2531,10 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
+.fill-select-checkbox:focus + label:before {
+  opacity: 1;
+}
+
 .fill-select-checkbox:not(checked):disabled + label:before {
   opacity: 0.3;
 }
@@ -2536,6 +2552,10 @@ input[type="radio"].visually-hidden {
 }
 
 .fill-select-checkbox:checked:hover + label:after {
+  opacity: 1;
+}
+
+.fill-select-checkbox:focus + label:after {
   opacity: 1;
 }
 
